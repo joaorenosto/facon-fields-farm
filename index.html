@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Falcon Fields Farm · jogo de fazenda para Android</title>
+<meta name="description" content="Falcon Fields Farm: plante, crie animais, construa e enfeite a sua fazenda no interior. Jogo de fazenda em pixel art com visão 3D para Android, no Google Play.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Falcon Fields Farm">
+<meta property="og:description" content="Uma vida nova no interior: plante, crie animais, construa e enfeite a sua fazenda. Jogo de fazenda em pixel art para Android.">
+<meta property="og:url" content="https://joaorenosto.github.io/falcon-fields-farm/">
+<meta property="og:image" content="https://joaorenosto.github.io/falcon-fields-farm/img/fazenda.jpg">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAD5UlEQVR42r1XbUhbZxR+zptUsdMa0zlNq2JtJXR1Ueb8JVvL1toyWisyhj+GlK6yUXFKGFLG2GBsMooEuy5C6QdjFBZWGCErpbR1KMMNNoXOdbSS1Y9ozGL8ipvWdst79qO90SQ3X1Y9cOHec885z3PO+1zu+xIAgIQAS5my5dmcvAMnzFvL9ldvzikygoiwFsbMi96hwenbtxzjNy9YHs1PeRVMUm6y9rxcZaz//HyqflsB1tEezky4Br8+1TD7x483QEIQAGTtrnzNZL58CwBYBgJEQqzs3vfhC3ELZ3/6e9wpMEtJQqMBgAHLW/tn7/Z20aYMffZLH127nZL5nGFlwErgY5V5GHDNqdY1FegAAF/1jidERmnwkX/S0/fJ62WawiPNH+tL9h5SAz9WmQcBCa9/KWpBr38JXv8SDJkpweu+/QyeefWkajyREMxSatMyMsFgOvDFz0Obs/MLGcxEQjibjQCAF/PTAQB1+4qCybbuoYTW2VSgC06k+MygympISSBa9I2N0FGbm5UXzmZjEFgBjwZ6rsMQvH+nxaNKYq7sPditrUGfGhk6+s24BBGFg8eycx0GFFcPB5+djh2wWh6ExDSa0/DZDw0hPru1NZQEM4tkv3UF3D09C/f07OPOqofRaE6Lm1vTeBrKEj8RBGnVRh9N6eG2fWtWTMD63DY02feF5pTXwNlsDE5CGw08Gmii4AAiwNVMJNMxAFgtD+B07AjxqWkgUdOGdx8NvKnzEgCg4XAtxK5LcDoal7vYZUVTp1pWZ3wC8cDrWluQXWgK8TUcrg2LqsX5q9+FeCoOfQAAMGzLi03AVKDDgGsuAryutWVNfj6eiXFVErr01GUNxBPc05q7356cCJO18PEDwK/X2yA9fZCevsQ1sJZWXlqFiosjy4TeLsT28hq4++0hfoENsoqLIxHgqyKgNu5kSCSsAdvpjg2ZjHY9BFheWoUj344llL9hGlgVgWjL8DQ6iFgCBpgA2kgxhmxI4oGvqxiJSMws/DvMADNDRos7e/J4UnX7f7uB79/Mj7E1lxLM7PeMDosB9/wVAogBjlU0WRLxZg8iutdtvyJ6nDPt80v/TRBBSEZgvUkoB5N/pv6a+MX2ZbtYeBjw2fo89QRQyU69RjICsaaxahLMzDIQIKHRgIiutr1bvzg35RNEEH9OLnRd6B07+NMdr6tkp16zp0i/qlNxV/v7ETrI2aJ9fGVuolxdqiZl0eOyn3rj4Gh/TxeJJ4dTIghmyPRUbc4rxVnm5w0Z1XtLc413h2aiElG2aPH+iCeue8DM7Bt1Dt7pvubouXzW8vf0pJeEECyl/B+jD6HfegVwnQAAAABJRU5ErkJggg==">
+<link rel="apple-touch-icon" href="img/icone-192.png">
+<meta name="theme-color" content="#2a170a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=Pixelify+Sans:wght@600;700&display=swap">
+<style>
+  :root{--madeira:#2a170a;--marrom:#5c3418;--ouro:#e8b44a;--ouro-d:#9a6a1a;--verde:#3d7a24;--link:#2f6a1c;
+    --tinta:#2e1d10;--suave:#6a4a2c;--linha:#eadbb8;--cartao:#fffbf2;--fundo:#faf3e3}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--fundo)}
+  body{font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    color:var(--tinta);line-height:1.6;font-size:15px;-webkit-text-size-adjust:100%}
+  a{color:var(--link)}
+  .faixa{background:var(--madeira);color:#fff;padding:30px 16px 34px;border-bottom:4px solid var(--verde)}
+  .faixa-in{max-width:760px;margin:0 auto}
+  .corpo{max-width:792px;margin:0 auto;padding:0 16px 32px}
+  .marca{display:flex;align-items:center;gap:12px;margin-bottom:14px;text-decoration:none}
+  .marca svg{width:48px;height:48px;flex:0 0 48px}
+  .marca span{font-family:"Pixelify Sans","IBM Plex Sans",sans-serif;font-weight:700;font-size:17px;letter-spacing:1.4px;color:var(--ouro)}
+  h1{font-family:"Pixelify Sans","IBM Plex Sans",sans-serif;font-weight:700;font-size:32px;line-height:1.1;margin:0 0 8px;letter-spacing:.2px}
+  .lead{margin:6px 0 20px;color:#ecdcbc;font-size:16.5px;max-width:56ch}
+  .botao{display:inline-flex;align-items:center;gap:10px;background:var(--ouro);color:var(--madeira);
+    font-weight:700;text-decoration:none;border-radius:10px;padding:12px 18px;font-size:15.5px;
+    box-shadow:0 2px 0 var(--ouro-d)}
+  .botao:hover{filter:brightness(1.05)}
+  .botao svg{width:20px;height:20px;flex:0 0 20px}
+  .fotos{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:22px 0 6px}
+  .fotos img{width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--linha);background:#dfe9c8}
+  .fotos img:first-child{grid-column:1 / -1}
+  .grade{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:26px 0 8px}
+  .card{background:var(--cartao);border:1px solid var(--linha);border-radius:12px;padding:14px 16px}
+  .card b{display:block;font-family:"Pixelify Sans","IBM Plex Sans",sans-serif;font-size:26px;line-height:1.3;color:var(--verde)}
+  .card span{color:var(--suave);font-size:14px}
+  /* a Pixelify Sans junta "fi" e "fl" num desenho parecido com um "A": ligaduras desligadas (como no jogo) */
+  .marca span,h1,.card b{font-variant-ligatures:none;font-feature-settings:"liga" 0,"clig" 0}
+  h2{font-size:17px;margin:26px 0 6px;color:var(--marrom)}
+  p{margin:0 0 10px;max-width:68ch}
+  ul{margin:0 0 10px;padding-left:20px;max-width:68ch}
+  li{margin:0 0 4px}
+  .rodape{margin-top:28px;color:var(--suave);font-size:13px;border-top:1px solid var(--linha);padding-top:12px}
+  @media (max-width:560px){ .grade{grid-template-columns:1fr} .fotos{grid-template-columns:1fr} }
+  @media (max-width:480px){ h1{font-size:26px} body{font-size:14.5px} }
+</style>
+</head>
+<body>
+  <div class="faixa"><div class="faixa-in">
+    <div class="marca">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" shape-rendering="crispEdges" aria-hidden="true"><path fill="#3a2210" d="M22 0h4v1h-4zM17 1h5v1h-5zM26 1h5v1h-5zM14 2h3v1h-3zM31 2h3v1h-3zM12 3h2v1h-2zM19 3h10v1h-10zM34 3h2v1h-2zM11 4h2v1h-2zM16 4h4v1h-4zM28 4h4v1h-4zM35 4h2v1h-2zM9 5h2v1h-2zM14 5h2v1h-2zM32 5h2v1h-2zM37 5h2v1h-2zM8 6h2v1h-2zM12 6h2v1h-2zM34 6h2v1h-2zM38 6h2v1h-2zM7 7h2v1h-2zM11 7h2v1h-2zM35 7h2v1h-2zM39 7h2v1h-2zM6 8h2v1h-2zM10 8h1v1h-1zM37 8h1v1h-1zM40 8h2v1h-2zM5 9h2v1h-2zM9 9h1v1h-1zM38 9h1v1h-1zM41 9h2v1h-2zM5 10h1v1h-1zM8 10h1v1h-1zM39 10h1v1h-1zM42 10h1v1h-1zM4 11h1v1h-1zM7 11h1v1h-1zM40 11h1v1h-1zM43 11h1v1h-1zM3 12h2v1h-2zM6 12h2v1h-2zM40 12h2v1h-2zM43 12h2v1h-2zM3 13h1v1h-1zM6 13h1v1h-1zM41 13h1v1h-1zM44 13h1v1h-1zM2 14h1v1h-1zM5 14h1v1h-1zM42 14h1v1h-1zM45 14h1v1h-1zM2 15h1v1h-1zM5 15h1v1h-1zM42 15h1v1h-1zM45 15h1v1h-1zM2 16h1v1h-1zM4 16h1v1h-1zM43 16h1v1h-1zM45 16h1v1h-1zM1 17h1v1h-1zM4 17h1v1h-1zM43 17h1v1h-1zM46 17h1v1h-1zM1 18h1v1h-1zM4 18h1v1h-1zM43 18h1v1h-1zM46 18h1v1h-1zM1 19h1v1h-1zM3 19h2v1h-2zM43 19h2v1h-2zM46 19h1v1h-1zM1 20h1v1h-1zM3 20h1v1h-1zM44 20h1v1h-1zM46 20h1v1h-1zM1 21h1v1h-1zM3 21h1v1h-1zM44 21h1v1h-1zM46 21h1v1h-1zM0 22h1v1h-1zM3 22h1v1h-1zM44 22h1v1h-1zM47 22h1v1h-1zM0 23h1v1h-1zM3 23h1v1h-1zM44 23h1v1h-1zM47 23h1v1h-1zM0 24h1v1h-1zM3 24h1v1h-1zM44 24h1v1h-1zM47 24h1v1h-1zM0 25h1v1h-1zM3 25h1v1h-1zM44 25h1v1h-1zM47 25h1v1h-1zM1 26h1v1h-1zM3 26h1v1h-1zM44 26h1v1h-1zM46 26h1v1h-1zM1 27h1v1h-1zM3 27h1v1h-1zM44 27h1v1h-1zM46 27h1v1h-1zM1 28h1v1h-1zM3 28h2v1h-2zM43 28h2v1h-2zM46 28h1v1h-1zM1 29h1v1h-1zM4 29h1v1h-1zM43 29h1v1h-1zM46 29h1v1h-1zM1 30h1v1h-1zM4 30h1v1h-1zM43 30h1v1h-1zM46 30h1v1h-1zM2 31h1v1h-1zM4 31h1v1h-1zM43 31h1v1h-1zM45 31h1v1h-1zM2 32h1v1h-1zM5 32h1v1h-1zM42 32h1v1h-1zM45 32h1v1h-1zM2 33h1v1h-1zM5 33h1v1h-1zM42 33h1v1h-1zM45 33h1v1h-1zM3 34h1v1h-1zM6 34h1v1h-1zM41 34h1v1h-1zM44 34h1v1h-1zM3 35h2v1h-2zM6 35h2v1h-2zM40 35h2v1h-2zM43 35h2v1h-2zM4 36h1v1h-1zM7 36h1v1h-1zM40 36h1v1h-1zM43 36h1v1h-1zM5 37h1v1h-1zM8 37h1v1h-1zM39 37h1v1h-1zM42 37h1v1h-1zM5 38h2v1h-2zM9 38h1v1h-1zM38 38h1v1h-1zM41 38h2v1h-2zM6 39h2v1h-2zM10 39h1v1h-1zM37 39h1v1h-1zM40 39h2v1h-2zM7 40h2v1h-2zM11 40h2v1h-2zM35 40h2v1h-2zM39 40h2v1h-2zM8 41h2v1h-2zM12 41h2v1h-2zM34 41h2v1h-2zM38 41h2v1h-2zM9 42h2v1h-2zM14 42h2v1h-2zM32 42h2v1h-2zM37 42h2v1h-2zM11 43h2v1h-2zM16 43h4v1h-4zM28 43h4v1h-4zM35 43h2v1h-2zM12 44h2v1h-2zM19 44h10v1h-10zM34 44h2v1h-2zM14 45h3v1h-3zM31 45h3v1h-3zM17 46h5v1h-5zM26 46h5v1h-5zM22 47h4v1h-4z"/><path fill="#e8b84a" d="M22 1h4v1h-4zM17 2h14v1h-14zM14 3h5v1h-5zM29 3h5v1h-5zM13 4h3v1h-3zM32 4h3v1h-3zM11 5h3v1h-3zM34 5h3v1h-3zM10 6h2v1h-2zM36 6h2v1h-2zM9 7h2v1h-2zM37 7h2v1h-2zM8 8h2v1h-2zM38 8h2v1h-2zM7 9h2v1h-2zM39 9h2v1h-2zM6 10h2v1h-2zM40 10h2v1h-2zM5 11h2v1h-2zM41 11h2v1h-2zM5 12h1v1h-1zM42 12h1v1h-1zM4 13h2v1h-2zM42 13h2v1h-2zM3 14h2v1h-2zM43 14h2v1h-2zM3 15h2v1h-2zM43 15h2v1h-2zM3 16h1v1h-1zM44 16h1v1h-1zM2 17h2v1h-2zM44 17h2v1h-2zM2 18h2v1h-2zM44 18h2v1h-2zM2 19h1v1h-1zM45 19h1v1h-1zM2 20h1v1h-1zM45 20h1v1h-1zM2 21h1v1h-1zM45 21h1v1h-1zM1 22h2v1h-2zM45 22h2v1h-2zM1 23h2v1h-2zM45 23h2v1h-2zM1 24h2v1h-2zM45 24h2v1h-2zM1 25h2v1h-2zM45 25h2v1h-2zM2 26h1v1h-1zM45 26h1v1h-1zM2 27h1v1h-1zM45 27h1v1h-1zM2 28h1v1h-1zM45 28h1v1h-1zM2 29h2v1h-2zM44 29h2v1h-2zM2 30h2v1h-2zM44 30h2v1h-2zM3 31h1v1h-1zM44 31h1v1h-1zM3 32h2v1h-2zM43 32h2v1h-2zM3 33h2v1h-2zM43 33h2v1h-2zM4 34h2v1h-2zM42 34h2v1h-2zM5 35h1v1h-1zM42 35h1v1h-1zM5 36h2v1h-2zM41 36h2v1h-2zM6 37h2v1h-2zM40 37h2v1h-2zM7 38h2v1h-2zM39 38h2v1h-2zM8 39h2v1h-2zM38 39h2v1h-2zM9 40h2v1h-2zM37 40h2v1h-2zM10 41h2v1h-2zM36 41h2v1h-2zM11 42h3v1h-3zM34 42h3v1h-3zM13 43h3v1h-3zM32 43h3v1h-3zM14 44h5v1h-5zM29 44h5v1h-5zM17 45h14v1h-14zM22 46h4v1h-4z"/><path fill="#2f8fd8" d="M20 4h8v1h-8zM16 5h16v1h-16z"/><path fill="#3f9bdf" d="M14 6h20v1h-20zM13 7h22v1h-22zM11 8h26v1h-26zM10 9h28v1h-28zM9 10h8v1h-8zM26 10h13v1h-13zM8 11h7v1h-7zM29 11h11v1h-11zM8 12h6v1h-6zM30 12h10v1h-10z"/><path fill="#2a170c" d="M17 10h9v1h-9zM15 11h2v1h-2zM26 11h3v1h-3zM14 12h1v1h-1zM29 12h1v1h-1zM12 13h2v1h-2zM30 13h2v1h-2zM11 14h1v1h-1zM32 14h3v1h-3zM10 15h1v1h-1zM35 15h1v1h-1zM10 16h1v1h-1zM36 16h1v1h-1zM9 17h1v1h-1zM37 17h1v1h-1zM8 18h1v1h-1zM37 18h1v1h-1zM8 19h1v1h-1zM37 19h1v1h-1zM7 20h1v1h-1zM37 20h1v1h-1zM7 21h1v1h-1zM37 21h1v1h-1zM7 22h1v1h-1zM37 22h1v1h-1zM7 23h1v1h-1zM33 23h1v1h-1zM37 23h1v1h-1zM7 24h1v1h-1zM31 24h3v1h-3zM37 24h1v1h-1zM7 25h1v1h-1zM30 25h1v1h-1zM34 25h1v1h-1zM36 25h1v1h-1zM6 26h1v1h-1zM30 26h1v1h-1zM35 26h1v1h-1zM6 27h1v1h-1zM30 27h1v1h-1zM6 28h1v1h-1zM30 28h1v1h-1zM6 29h1v1h-1zM29 29h1v1h-1zM6 30h1v1h-1zM29 30h1v1h-1zM6 31h1v1h-1zM29 31h1v1h-1zM29 32h1v1h-1zM29 33h1v1h-1zM30 34h1v1h-1zM30 35h1v1h-1zM30 36h1v1h-1zM30 37h1v1h-1zM31 38h1v1h-1zM31 39h1v1h-1zM31 40h1v1h-1zM32 41h1v1h-1z"/><path fill="#8a5228" d="M17 11h1v1h-1zM24 11h2v1h-2zM15 12h1v1h-1zM29 13h1v1h-1zM30 14h1v1h-1zM26 15h4v1h-4zM27 16h3v1h-3zM17 17h3v1h-3zM27 17h3v1h-3zM14 18h6v1h-6zM27 18h3v1h-3zM13 19h8v1h-8zM26 19h4v1h-4zM12 20h6v1h-6zM11 21h5v1h-5zM8 22h1v1h-1zM10 22h4v1h-4zM8 23h6v1h-6zM8 24h6v1h-6zM8 25h6v1h-6zM7 26h7v1h-7zM7 27h7v1h-7zM7 28h8v1h-8zM7 29h8v1h-8zM7 30h8v1h-8zM7 31h9v1h-9zM6 32h10v1h-10zM6 33h11v1h-11zM7 34h11v1h-11zM8 35h11v1h-11zM8 36h12v1h-12zM9 37h2v1h-2zM12 37h9v1h-9zM10 38h2v1h-2zM14 38h7v1h-7zM11 39h3v1h-3zM15 39h7v1h-7zM13 40h2v1h-2zM17 40h6v1h-6zM14 41h3v1h-3zM18 41h6v1h-6zM16 42h2v1h-2zM19 42h6v1h-6zM21 43h7v1h-7z"/><path fill="#5c3418" d="M18 11h6v1h-6zM16 12h13v1h-13zM14 13h2v1h-2zM19 13h10v1h-10zM12 14h3v1h-3zM16 14h6v1h-6zM25 14h5v1h-5zM11 15h10v1h-10zM11 16h9v1h-9zM10 17h7v1h-7zM9 18h5v1h-5zM9 19h4v1h-4zM8 20h4v1h-4zM20 20h1v1h-1zM8 21h3v1h-3zM20 21h6v1h-6zM9 22h1v1h-1zM20 22h6v1h-6zM20 23h6v1h-6zM20 24h5v1h-5zM20 25h5v1h-5zM20 26h5v1h-5zM21 27h4v1h-4zM21 28h4v1h-4zM21 29h3v1h-3zM21 30h3v1h-3zM22 31h2v1h-2z"/><path fill="#4fa8e5" d="M7 13h5v1h-5zM32 13h9v1h-9zM6 14h5v1h-5zM35 14h7v1h-7zM6 15h4v1h-4zM36 15h6v1h-6zM5 16h5v1h-5zM37 16h6v1h-6zM5 17h4v1h-4zM38 17h5v1h-5zM5 18h3v1h-3zM38 18h5v1h-5zM5 19h3v1h-3zM38 19h5v1h-5zM4 20h3v1h-3zM38 20h6v1h-6zM4 21h3v1h-3zM38 21h6v1h-6z"/><path fill="#b4743a" d="M16 13h3v1h-3zM15 14h1v1h-1zM11 37h1v1h-1zM12 38h2v1h-2zM27 38h1v1h-1zM14 39h1v1h-1zM15 40h2v1h-2zM29 40h1v1h-1zM17 41h1v1h-1zM18 42h1v1h-1zM26 42h1v1h-1zM20 43h1v1h-1z"/><path fill="#f5c431" d="M22 14h3v1h-3zM21 15h1v1h-1zM25 15h1v1h-1zM30 15h1v1h-1zM20 16h1v1h-1zM26 16h1v1h-1zM30 16h1v1h-1zM20 17h1v1h-1zM26 17h1v1h-1zM30 17h1v1h-1zM20 18h1v1h-1zM26 18h1v1h-1zM30 18h1v1h-1zM21 19h1v1h-1zM25 19h1v1h-1zM30 19h1v1h-1zM22 20h3v1h-3z"/><path fill="#7a8296" d="M31 14h1v1h-1zM31 15h4v1h-4zM31 16h5v1h-5z"/><path fill="#1a1210" d="M22 15h3v1h-3zM21 16h1v1h-1zM24 16h2v1h-2zM21 17h1v1h-1zM23 17h3v1h-3zM21 18h5v1h-5zM22 19h3v1h-3z"/><path fill="#ffffff" d="M22 16h2v1h-2zM22 17h1v1h-1z"/><path fill="#d89a1c" d="M31 17h1v1h-1z"/><path fill="#454a5c" d="M32 17h5v1h-5zM31 18h6v1h-6zM31 19h6v1h-6zM31 20h6v1h-6zM32 21h5v1h-5zM33 22h4v1h-4zM34 23h3v1h-3zM34 24h3v1h-3zM35 25h1v1h-1z"/><path fill="#f7e8c6" d="M18 20h2v1h-2zM21 20h1v1h-1zM25 20h6v1h-6zM17 21h3v1h-3zM26 21h4v1h-4zM17 22h3v1h-3zM26 22h4v1h-4zM17 23h3v1h-3zM26 23h4v1h-4zM17 24h3v1h-3zM25 24h6v1h-6zM17 25h3v1h-3zM25 25h5v1h-5zM17 26h3v1h-3zM25 26h5v1h-5zM17 27h4v1h-4zM25 27h5v1h-5zM17 28h4v1h-4zM25 28h5v1h-5zM17 29h4v1h-4zM24 29h5v1h-5zM17 30h4v1h-4zM24 30h5v1h-5zM17 31h5v1h-5zM24 31h5v1h-5zM17 32h12v1h-12zM17 33h12v1h-12zM18 34h12v1h-12zM19 35h11v1h-11zM20 36h10v1h-10zM21 37h9v1h-9zM21 38h6v1h-6zM28 38h3v1h-3zM22 39h9v1h-9z"/><path fill="#e2c898" d="M16 21h1v1h-1zM14 22h3v1h-3zM14 23h3v1h-3zM14 24h3v1h-3zM14 25h3v1h-3zM14 26h3v1h-3zM14 27h3v1h-3zM15 28h2v1h-2zM15 29h2v1h-2zM15 30h2v1h-2zM16 31h1v1h-1zM16 32h1v1h-1zM23 40h6v1h-6zM30 40h1v1h-1zM24 41h8v1h-8zM25 42h1v1h-1zM27 42h5v1h-5z"/><path fill="#2c3040" d="M30 21h2v1h-2zM30 22h3v1h-3zM30 23h3v1h-3z"/><path fill="#5fb4ec" d="M4 22h3v1h-3zM38 22h6v1h-6zM4 23h3v1h-3zM38 23h6v1h-6zM4 24h3v1h-3zM38 24h6v1h-6zM4 25h3v1h-3zM31 25h3v1h-3zM37 25h7v1h-7zM4 26h2v1h-2zM31 26h4v1h-4zM36 26h8v1h-8zM4 27h2v1h-2zM31 27h13v1h-13zM5 28h1v1h-1zM31 28h12v1h-12z"/><path fill="#77c1ef" d="M5 29h1v1h-1zM30 29h13v1h-13zM5 30h1v1h-1zM30 30h13v1h-13zM5 31h1v1h-1zM30 31h13v1h-13zM30 32h12v1h-12zM30 33h12v1h-12zM31 34h10v1h-10zM31 35h9v1h-9zM31 36h9v1h-9zM31 37h8v1h-8z"/><path fill="#8ecff3" d="M32 38h6v1h-6zM32 39h5v1h-5zM32 40h3v1h-3zM33 41h1v1h-1z"/></svg>
+      <span>FALCON FIELDS FARM</span>
+    </div>
+    <h1>Uma vida nova no interior</h1>
+    <p class="lead">Você comprou uma fazenda no meio da mata, com uma casinha, um celeiro e um poço. O resto é com você: plante, crie animais, construa, atenda os vizinhos e veja o sítio crescer, em pixel art com visão 3D.</p>
+    <a class="botao" href="https://play.google.com/store/apps/details?id=br.com.joao.falconfieldsfarm" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#2a170a" d="M4 2.8v18.4c0 .5.5.8.9.6L20.6 12.6c.5-.3.5-.9 0-1.2L4.9 2.2c-.4-.2-.9.1-.9.6z"/></svg>
+      Baixar no Google Play
+    </a>
+  </div></div>
+
+  <div class="corpo">
+    <div class="fotos">
+      <img src="img/fazenda.jpg" width="1280" height="600" alt="A fazenda vista do alto em 3D: a casa, o celeiro vermelho, o silo, a roça e os currais com vacas, ovelhas, porcos e cavalos">
+      <img src="img/plantacoes.jpg" width="1280" height="600" loading="lazy" alt="A roça com milho, girassóis e abóboras, o espantalho e o fazendeiro ao lado da placa da fazenda">
+      <img src="img/bichos.jpg" width="1280" height="600" loading="lazy" alt="Galinhas, vacas, ovelhas, porcos e cavalos nos currais, com as colmeias e o açude">
+      <img src="img/vizinhos.jpg" width="1280" height="600" loading="lazy" alt="A vizinha Nona Pina chega à fazenda com uma encomenda">
+      <img src="img/inverno.jpg" width="1280" height="600" loading="lazy" alt="A fazenda coberta de neve no inverno">
+    </div>
+
+    <div class="grade">
+      <div class="card"><b>270+</b><span>cultivos para plantar e colher</span></div>
+      <div class="card"><b>110+</b><span>bichos para criar</span></div>
+      <div class="card"><b>120+</b><span>construções para erguer</span></div>
+    </div>
+
+    <h2>Sobre o jogo</h2>
+    <p>Plante milho, feijão, café, cana e girassol, cuide do pomar e da estufa e colha no tempo certo: o ano tem quatro estações, o dia vira noite e a chuva rega a roça. Crie galinhas, vacas, ovelhas, porcos, cavalos e abelhas, transforme a colheita em pão, queijo, doce e café nas suas construções e venda no Mercado ou entregue as encomendas dos clientes.</p>
+    <ul>
+      <li>Mais de 40 vizinhos para conversar, dar presentes e ganhar corações, além de pesca, bichos do mato, tesouros para o Álbum e concursos nas feiras.</li>
+      <li>Centenas de roupas para o fazendeiro, mais de 100 pets que acompanham você e enfeites para deixar a fazenda do seu jeito.</li>
+      <li>Mais de mil missões e 136 conquistas. Gire o mapa e veja a fazenda de todos os lados.</li>
+      <li>Funciona sem internet. Seis espaços de jogos salvos e save na nuvem com o Google Play Games.</li>
+      <li>Grátis, com um intervalo comercial a cada 30 minutos de jogo. Compra única para jogar sem anúncios; a Loja tem moedas e itens exclusivos, e nada disso é preciso para completar o jogo.</li>
+    </ul>
+
+    <h2>Privacidade e contato</h2>
+    <p>Leia a <a href="privacidade.html">Política de Privacidade</a>. Dúvidas sobre o jogo: veja o <a href="privacidade.html#contato">contato</a> no fim da política.</p>
+
+    <p class="rodape">Falcon Fields Farm · <a href="privacidade.html">Política de Privacidade</a> · <a href="https://play.google.com/store/apps/details?id=br.com.joao.falconfieldsfarm" rel="noopener">Google Play</a> · <a href="../">Outros jogos</a></p>
+  </div>
+</body>
+</html>
